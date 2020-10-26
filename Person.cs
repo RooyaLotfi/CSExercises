@@ -60,7 +60,12 @@ namespace ObjectOrientedPrograms
                 return true;
             else
                 return false;
-        } 
+        }
+        
+        public string ToString()
+        {
+            return "User : " + id + ", name: " + name + ", age: "+ age + ", gender: " + gender;
+        }
 
     }
 }
