@@ -13,18 +13,21 @@ namespace ObjectOrientedPrograms
         private double weight = 0;
         private double height = 0;
 
-        public Person(string id){
+        public Person(string id)
+        {
             this.id = id;
         }
 
-        public Person(string id, string name, int age, char gender, double weight){
+        public Person(string id, string name, int age, char gender, double weight)
+        {
             this.id = id;
             this.name = name;
             this.age = age;
             this.gender = gender;
         }
 
-        public Person(string id, string name, int age, char gender, double weight, double height){
+        public Person(string id, string name, int age, char gender, double weight, double height)
+        {
             this.id = id;
             this.name = name;
             this.age = age;
@@ -33,7 +36,8 @@ namespace ObjectOrientedPrograms
             this.height = height;
         }
 
-        public int Calculate(){
+        public int Calculate()
+        {
             int bmi = (weight)/(height^2);
             if(bmi < 18.5)
                 return -1;
@@ -42,12 +46,21 @@ namespace ObjectOrientedPrograms
             return 1;
         }
 
-        public bool IsOver18(){
+        public bool IsOver18()
+        {
             if (age < 18)
                 return false;
             else 
                 return true;
         }
+
+        private bool CheckGender(char gen)
+        {
+            if(gender == gen)
+                return true;
+            else
+                return false;
+        } 
 
     }
 }
