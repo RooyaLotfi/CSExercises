@@ -6,7 +6,7 @@ namespace ObjectOrientedPrograms
 {
     class Person
     {
-        private string id;
+        private int id;
         private string name = "";
         private int age = 0;
         private char gender = 'M';
@@ -15,12 +15,12 @@ namespace ObjectOrientedPrograms
 
         public Person(string id)
         {
-            this.id = id;
+            this.id = GenerateID();
         }
 
         public Person(string id, string name, int age, char gender, double weight)
         {
-            this.id = id;
+            this.id = GenerateID();
             this.name = name;
             this.age = age;
             this.gender = gender;
@@ -28,7 +28,7 @@ namespace ObjectOrientedPrograms
 
         public Person(string id, string name, int age, char gender, double weight, double height)
         {
-            this.id = id;
+            this.id = GenerateID();
             this.name = name;
             this.age = age;
             this.gender = gender;
@@ -36,9 +36,44 @@ namespace ObjectOrientedPrograms
             this.height = height;
         }
 
+        public string Name 
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public char Gender
+        {
+            get { return gender; }
+            set { gender = value; }
+        }
+
+        public double Weight
+        {
+            get { return weight; }
+            set { weight = value; }
+        }
+
+        public double Height
+        {
+            get { return height; }
+            set { height = value; }
+        }
+
+        public int Id
+        {
+            get { return id; }
+        }
+
         public int Calculate()
         {
-            int bmi = (weight)/(height^2);
+            float bmi = (float)weight/(float)(height * height);
             if(bmi < 18.5)
                 return -1;
             else if( 18.5 <= bmi && bmi <= 25 )
@@ -67,12 +102,14 @@ namespace ObjectOrientedPrograms
             return "User : " + id + ", name: " + name + ", age: "+ age + ", gender: " + gender;
         }
 
-        public int GenerateID() 
+        private int GenerateID() 
         {
             Random rnd = new Random(); 
             id = rnd.Next(10000000, 99999999);
             return id;
         }
+        
+
 
     }
 }
