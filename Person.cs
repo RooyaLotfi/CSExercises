@@ -70,7 +70,7 @@ namespace ObjectOrientedPrograms
         public int GenerateID() 
         {
             Random rnd = new Random(); 
-            id = rnd. Next(10000000, 99999999);
+            id = rnd.Next(10000000, 99999999);
             return id;
         }
 
