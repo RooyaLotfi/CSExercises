@@ -33,6 +33,14 @@ namespace ObjectOrientedPrograms
             this.height = height;
         }
 
+        public int Calculate(){
+            int bmi = (weight)/(height^2);
+            if(bmi < 18.5)
+                return -1;
+            else if( 18.5 <= bmi && bmi <= 25 )
+                return 0;
+            return 1;
+        }
 
     }
 }
