@@ -42,7 +42,7 @@ namespace ObjectOrientedPrograms
             return 1;
         }
 
-        public bool isOver18(){
+        public bool IsOver18(){
             if (age < 18)
                 return false;
             else 
