@@ -6,7 +6,7 @@ namespace ObjectOrientedPrograms
 {
     class Person
     {
-        private int id;
+        private int _id;
         private string name = "";
         private int age = 0;
         private char gender = 'M';
@@ -15,12 +15,12 @@ namespace ObjectOrientedPrograms
 
         public Person(string id)
         {
-            this.id = GenerateID();
+            this._id = GenerateID();
         }
 
         public Person(string id, string name, int age, char gender, double weight)
         {
-            this.id = GenerateID();
+            this._id = GenerateID();
             this.name = name;
             this.age = age;
             this.gender = gender;
@@ -28,7 +28,7 @@ namespace ObjectOrientedPrograms
 
         public Person(string id, string name, int age, char gender, double weight, double height)
         {
-            this.id = GenerateID();
+            this._id = GenerateID();
             this.name = name;
             this.age = age;
             this.gender = gender;
@@ -68,7 +68,7 @@ namespace ObjectOrientedPrograms
 
         public int Id
         {
-            get { return id; }
+            get { return _id; }
         }
 
         public int Calculate()
@@ -99,14 +99,14 @@ namespace ObjectOrientedPrograms
         
         public string ToString()
         {
-            return "User : " + id + ", name: " + name + ", age: "+ age + ", gender: " + gender;
+            return "User : " + _id + ", name: " + name + ", age: "+ age + ", gender: " + gender;
         }
 
         private int GenerateID() 
         {
-            Random rnd = new Random(); 
-            id = rnd.Next(10000000, 99999999);
-            return id;
+            Random rnd = new Random();
+            _id = rnd.Next(10000000, 99999999);
+            return _id;
         }
         
 
