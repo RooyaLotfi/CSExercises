@@ -10,10 +10,10 @@ namespace ObjectOrientedPrograms
         private string _name = "";
         private int _age = 0;
         private char _gender = 'M';
-        private double weight = 0;
-        private double height = 0;
+        private double _weight = 0;
+        private double _height = 0;
 
-        public Person(string id)
+        public Person()
         {
             this._id = GenerateID();
         }
@@ -32,8 +32,8 @@ namespace ObjectOrientedPrograms
             this._name = name;
             this._age = age;
             this._gender = gender;
-            this.weight = weight;
-            this.height = height;
+            this._weight = weight;
+            this._height = height;
         }
 
         public string Name 
@@ -56,14 +56,14 @@ namespace ObjectOrientedPrograms
 
         public double Weight
         {
-            get { return weight; }
-            set { weight = value; }
+            get { return _weight; }
+            set { _weight = value; }
         }
 
         public double Height
         {
-            get { return height; }
-            set { height = value; }
+            get { return _height; }
+            set { _height = value; }
         }
 
         public int Id
@@ -73,7 +73,7 @@ namespace ObjectOrientedPrograms
 
         public int Calculate()
         {
-            float bmi = (float)weight/(float)(height * height);
+            float bmi = (float)_weight/(float)(_height * _height);
             if(bmi < 18.5)
                 return -1;
             else if( 18.5 <= bmi && bmi <= 25 )
@@ -96,11 +96,8 @@ namespace ObjectOrientedPrograms
             else
                 return false;
         }
-        
-        public string ToString()
-        {
-            return "User : " + _id + ", name: " + _name + ", age: "+ _age + ", gender: " + _gender;
-        }
+
+        public string ToString => "User : " + _id + ", name: " + _name + ", age: " + _age + ", gender: " + _gender;
 
         private int GenerateID() 
         {
@@ -108,8 +105,6 @@ namespace ObjectOrientedPrograms
             _id = rnd.Next(10000000, 99999999);
             return _id;
         }
-        
-
 
     }
 }
