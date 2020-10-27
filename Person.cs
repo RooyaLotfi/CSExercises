@@ -8,7 +8,7 @@ namespace ObjectOrientedPrograms
     {
         private int _id;
         private string _name = "";
-        private int age = 0;
+        private int _age = 0;
         private char gender = 'M';
         private double weight = 0;
         private double height = 0;
@@ -22,7 +22,7 @@ namespace ObjectOrientedPrograms
         {
             this._id = GenerateID();
             this._name = name;
-            this.age = age;
+            this._age = age;
             this.gender = gender;
         }
 
@@ -30,7 +30,7 @@ namespace ObjectOrientedPrograms
         {
             this._id = GenerateID();
             this._name = name;
-            this.age = age;
+            this._age = age;
             this.gender = gender;
             this.weight = weight;
             this.height = height;
@@ -44,8 +44,8 @@ namespace ObjectOrientedPrograms
 
         public int Age
         {
-            get { return age; }
-            set { age = value; }
+            get { return _age; }
+            set { _age = value; }
         }
 
         public char Gender
@@ -83,7 +83,7 @@ namespace ObjectOrientedPrograms
 
         public bool IsOver18()
         {
-            if (age < 18)
+            if (_age < 18)
                 return false;
             else 
                 return true;
@@ -99,7 +99,7 @@ namespace ObjectOrientedPrograms
         
         public string ToString()
         {
-            return "User : " + _id + ", name: " + _name + ", age: "+ age + ", gender: " + gender;
+            return "User : " + _id + ", name: " + _name + ", age: "+ _age + ", gender: " + gender;
         }
 
         private int GenerateID() 
