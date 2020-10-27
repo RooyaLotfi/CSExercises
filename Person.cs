@@ -18,7 +18,7 @@ namespace ObjectOrientedPrograms
             this._id = GenerateID();
         }
 
-        public Person(string id, string name, int age, char gender, double weight)
+        public Person(string name, int age, char gender, double weight)
         {
             this._id = GenerateID();
             this._name = name;
@@ -26,7 +26,7 @@ namespace ObjectOrientedPrograms
             this._gender = gender;
         }
 
-        public Person(string id, string name, int age, char gender, double weight, double height)
+        public Person(string name, int age, char gender, double weight, double height)
         {
             this._id = GenerateID();
             this._name = name;
