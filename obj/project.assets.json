@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\.NET class\\OopAssignment\\2020-10-26\\Solutions\\ObjectOrientedPrograms\\ObjectOrientedPrograms\\ObjectOrientedPrograms.csproj",
+      "projectUniqueName": "E:\\.NET class\\OopAssignment\\2020-10-26\\Solutions\\ObjectOrientedPrograms\\ObjectOrientedPrograms.csproj",
       "projectName": "ObjectOrientedPrograms",
-      "projectPath": "E:\\.NET class\\OopAssignment\\2020-10-26\\Solutions\\ObjectOrientedPrograms\\ObjectOrientedPrograms\\ObjectOrientedPrograms.csproj",
+      "projectPath": "E:\\.NET class\\OopAssignment\\2020-10-26\\Solutions\\ObjectOrientedPrograms\\ObjectOrientedPrograms.csproj",
       "packagesPath": "C:\\Users\\14315\\.nuget\\packages\\",
-      "outputPath": "E:\\.NET class\\OopAssignment\\2020-10-26\\Solutions\\ObjectOrientedPrograms\\ObjectOrientedPrograms\\obj\\",
+      "outputPath": "E:\\.NET class\\OopAssignment\\2020-10-26\\Solutions\\ObjectOrientedPrograms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
