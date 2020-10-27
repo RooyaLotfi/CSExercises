@@ -9,7 +9,7 @@ namespace ObjectOrientedPrograms
         private int _id;
         private string _name = "";
         private int _age = 0;
-        private char gender = 'M';
+        private char _gender = 'M';
         private double weight = 0;
         private double height = 0;
 
@@ -23,7 +23,7 @@ namespace ObjectOrientedPrograms
             this._id = GenerateID();
             this._name = name;
             this._age = age;
-            this.gender = gender;
+            this._gender = gender;
         }
 
         public Person(string id, string name, int age, char gender, double weight, double height)
@@ -31,7 +31,7 @@ namespace ObjectOrientedPrograms
             this._id = GenerateID();
             this._name = name;
             this._age = age;
-            this.gender = gender;
+            this._gender = gender;
             this.weight = weight;
             this.height = height;
         }
@@ -50,8 +50,8 @@ namespace ObjectOrientedPrograms
 
         public char Gender
         {
-            get { return gender; }
-            set { gender = value; }
+            get { return _gender; }
+            set { _gender = value; }
         }
 
         public double Weight
@@ -91,7 +91,7 @@ namespace ObjectOrientedPrograms
 
         private bool CheckGender(char gen)
         {
-            if(gender == gen)
+            if(_gender == gen)
                 return true;
             else
                 return false;
@@ -99,7 +99,7 @@ namespace ObjectOrientedPrograms
         
         public string ToString()
         {
-            return "User : " + _id + ", name: " + _name + ", age: "+ _age + ", gender: " + gender;
+            return "User : " + _id + ", name: " + _name + ", age: "+ _age + ", gender: " + _gender;
         }
 
         private int GenerateID() 
